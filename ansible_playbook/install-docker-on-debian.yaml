@@ -19,4 +19,4 @@
     vars:
       # ansible_user is special-variable
       # ref: https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html#special-variables
-      current_user: "{{ ansible_user }}"
+      current_user: "{{ lookup('env', 'USER') }}"
